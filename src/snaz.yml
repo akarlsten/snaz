@@ -191,7 +191,7 @@ colors:
 
   # Editor Colors
   editor.foreground: *FG
-  editor.background: *PINK
+  editor.background: *BG
   editorLineNumber.foreground: *COMMENT
   editorCursor.foreground:
 

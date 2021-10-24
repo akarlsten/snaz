@@ -2,17 +2,18 @@
   "name": "snaz",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "publisher": "akarlsten",
+  "engines": {"vscode": "^1.22.0"},
 	"scripts": {
 		"build": "node ./scripts/build.js",
 		"lint": "node ./scripts/lint.js",
-		"package": "vsce package -o ./bin/dracula.vsix",
+		"package": "vsce package -o ./bin/snaz.vsix",
 		"vscode:prepublish": "npm run build",
 		"vsce-publish": "vsce publish"
 	},
   "author": "Adam Karlsten <adamkarlsten@gmail.com>",
   "license": "ISC",
+  "repository": {"url": "https://github.com/akarlsten/snaz"},
   "dependencies": {
     "js-yaml": "^4.1.0",
     "prettier": "^2.4.1",
