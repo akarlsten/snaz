@@ -10,23 +10,25 @@ snaz:
     - &OLDCOMMENT '#4D4E4F'
     - &GREY '#40414A'
     - &OLDLINEHIGHLIGHT '#181B29'
-    - &OLDBRIGHTBLACK '#585A61'
+    - &OLDBRIGHTBLACK '#585A61' # old selection
     - &OLDCURSORFOREGROUND '#838387'
     - &OLDTABBORDER '#2C2F3F'
     - &OLDCHECKBOXBG '#232631'
     - &OLDPURPLE '#b76aff'
+    - &NEWCOMMENT '#353b5b' #'#464d78' #353b5b #24283e
   base:
     - &BG '#141622'
     - &FG '#eff0eb'
-    - &SELECTION '#585A61'
-    - &COMMENT '#6272A4' #
-    - &CYAN '#8BE9FD' #
-    - &GREEN '#50FA7B' #
-    - &ORANGE '#FFB86C' #
-    - &PINK '#FF79C6' #
-    - &PURPLE '#BD93F9' #
-    - &RED '#FF5555' #
-    - &YELLOW '#F1FA8C' #
+    - &SELECTION '#353b5b'
+    - &COMMENT '#464d78'
+    - &CYAN '#9aedfe'
+    - &GREEN '#5af78e'
+    - &ORANGE '#FF8958'
+    - &PINK '#ff6ac1'
+    - &PURPLE '#b76aff'
+    - &RED '#ff5c57'
+    - &YELLOW '#ffbc58'
+    - &BLUE '#57c7ff'
   ansi:
     - &COLOR0 '#141622'
     - &COLOR1 '#ff5c57'
@@ -36,28 +38,28 @@ snaz:
     - &COLOR5 '#ff6ac1'
     - &COLOR6 '#9aedfe'
     - &COLOR7 '#eff0eb'
-    - &COLOR8 '#24283e' # bBlack #24283e
-    - &COLOR9 '#ff6c67' # bRed #ff6c67
-    - &COLOR10 '#6af799' # bGreen #6af799
-    - &COLOR11 '#ffc268' # bYellow #ffc268
-    - &COLOR12 '#67ccff' # bbBlue #67ccff
-    - &COLOR13 '#ff78c7' # bMagenta #ff78c7
-    - &COLOR14 '#a4eefe' # bCyan #a4eefe
-    - &COLOR15 '#f0f1ed' # bWhite #f0f1ed
+    - &COLOR8 '#2d314d' # bBlack #2d314d
+    - &COLOR9 '#ff7470' # bRed #ff7470
+    - &COLOR10 '#72f89e' # bGreen #72f89e
+    - &COLOR11 '#ffc671' # bYellow #ffc671
+    - &COLOR12 '#70cfff' # bbBlue #70cfff
+    - &COLOR13 '#ff80ca' # bMagenta #ff80ca
+    - &COLOR14 '#a9effe' # bCyan #a9effe
+    - &COLOR15 '#f1f2ee' # bWhite #f1f2ee
   brightOther:
     # Temporary (awaiting fix)
-    - &TEMP_QUOTES '#E9F284' #
-    - &TEMP_PROPERTY_QUOTES '#8BE9FE' #
+    - &TEMP_QUOTES '#ffc671'
+    - &TEMP_PROPERTY_QUOTES '#a9effe'
   other:
-    - &LineHighlight '#44475A75' #
-    - &NonText '#FFFFFF1A' #
-    - &WHITE '#FFFFFF' #
-    - &TAB_DROP_BG '#44475A70' #
+    - &LineHighlight '#14162275'
+    - &NonText '#eff0eb1A'
+    - &WHITE '#eff0eb'
+    - &TAB_DROP_BG '#14162270'
     # UI Variants
-    - &BGLighter '#424450'
-    - &BGLight '#343746' # HSV (230   , 25.71, 27.45) #
-    - &BGDark '#21222C' # HSV (234.55, 25   , 17.25) #
-    - &BGDarker '#191A21' # HSV (234.55, 25   , 13   ) #
+    - &BGLighter '#464d78'
+    - &BGLight '#353b5b'
+    - &BGDark '#24283e'
+    - &BGDarker '#10111b'
 
 # User Interface (more info: https://code.visualstudio.com/docs/getstarted/theme-color-reference)
 colors:
@@ -93,47 +95,47 @@ colors:
   errorForeground: *RED # Overall foreground color for error messages (this color is only used if not overridden by a component)
 
   # Button Control
-  button.background: *SELECTION # Button background color
-  button.foreground: *FG # Button foreground color
-  button.border: # Button border color
-  button.hoverBackground: # Button background color when hovering
-  button.secondaryBackground: *BG # Secondary button background color.
-  button.secondaryForeground: *FG # Secondary button foreground color.
-  button.secondaryHoverBackground: *BGLight # Secondary button background color when hovering.
+  button.background: *PINK # * Button background color
+  button.foreground: *FG # * Button foreground color
+  button.border: # * Button border color
+  button.hoverBackground: *COLOR13 # * Button background color when hovering
+  button.secondaryBackground: *BGLight # * Secondary button background color.
+  button.secondaryForeground: *FG # * Secondary button foreground color.
+  button.secondaryHoverBackground: *BGLighter # * Secondary button background color when hovering.
 
   # Dropdown Control
-  dropdown.background: *BGLight # Dropdown background
-  dropdown.border: *BGDarker # Dropdown border
-  dropdown.foreground: *FG # Dropdown foreground
+  dropdown.background: *BG # * Dropdown background
+  dropdown.border: *BGDark # * Dropdown border
+  dropdown.foreground: *FG # * Dropdown foreground
 
   # Input Control
-  input.background: *BG # Input box background
-  input.foreground: *FG # Input box foreground
-  input.border: *BGDarker # Input box border
-  input.placeholderForeground: *COMMENT # Input box foreground color for placeholder text
-  inputOption.activeBorder: *PURPLE # Border color of activated options in input fields
-  inputValidation.infoForeground: # Input validation foreground color for information severity
-  inputValidation.infoBackground: # Input validation background color for information severity
-  inputValidation.infoBorder: *PINK # Input validation border color for information severity
-  inputValidation.warningForeground: # Input validation foreground color for warning severity
-  inputValidation.warningBackground: # Input validation background color for information warning
-  inputValidation.warningBorder: *ORANGE # Input validation border color for warning severity
-  inputValidation.errorForeground: # Input validation foreground color for error severity
-  inputValidation.errorBackground: # Input validation background color for error severity
-  inputValidation.errorBorder: *RED # Input validation border color for error severity
+  input.background: *BG # * Input box background
+  input.foreground: *FG # * Input box foreground
+  input.border: *BGDark # * Input box border
+  input.placeholderForeground: *COMMENT # * Input box foreground color for placeholder text
+  inputOption.activeBorder: *BGLight # * Border color of activated options in input fields
+  inputValidation.infoForeground: #  *Input validation foreground color for information severity
+  inputValidation.infoBackground: #  *Input validation background color for information severity
+  inputValidation.infoBorder: *PINK #  *Input validation border color for information severity
+  inputValidation.warningForeground: # * Input validation foreground color for warning severity
+  inputValidation.warningBackground: # * Input validation background color for information warning
+  inputValidation.warningBorder: *ORANGE # * Input validation border color for warning severity
+  inputValidation.errorForeground: #  *Input validation foreground color for error severity
+  inputValidation.errorBackground: # * Input validation background color for error severity
+  inputValidation.errorBorder: *RED #  *Input validation border color for error severity
 
   # Scroll Bar Control
-  scrollbar.shadow: # Scroll Bar shadow to indicate that the view is scrolled
-  scrollbarSlider.activeBackground: # Slider background color when active
-  scrollbarSlider.background: # Slider background color
-  scrollbarSlider.hoverBackground: # Slider background color when hovering
+  scrollbar.shadow: #* Scroll Bar shadow to indicate that the view is scrolled
+  scrollbarSlider.activeBackground: #* Slider background color when active
+  scrollbarSlider.background: #* Slider background color
+  scrollbarSlider.hoverBackground: #* Slider background color when hovering
 
   # Badge
-  badge.foreground: *FG # Badge foreground color
-  badge.background: *SELECTION # Badge background color
+  badge.foreground: *FG # * Badge foreground color
+  badge.background: *SELECTION # * Badge background color
 
   # Progress Bar
-  progressBar.background: *PINK # Background color of the progress bar shown for long running operations
+  progressBar.background: *PINK # *Background color of the progress bar shown for long running operations
 
   # List & Trees
   list.activeSelectionBackground: *SELECTION # List/Tree background color for the selected item when the list/tree is active
@@ -189,7 +191,7 @@ colors:
 
   # Editor Colors
   editor.foreground: *FG
-  editor.background: *BG
+  editor.background: *PINK
   editorLineNumber.foreground: *COMMENT
   editorCursor.foreground:
 

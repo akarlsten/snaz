@@ -13,7 +13,7 @@ const tinycolor = require('tinycolor2');
 
 /**
  * @typedef {Object} Theme - Parsed theme object.
- * @prop {Record<'base'|'ansi'|'brightOther'|'other', string[]>} dracula - Dracula color variables.
+ * @prop {Record<'base'|'ansi'|'brightOther'|'other', string[]>} snaz - Snaz color variables.
  * @prop {Record<string, string|null|undefined>} colors - VSCode color mapping.
  * @prop {TokenColor[]} tokenColors - Textmate token colors.
  */
@@ -37,7 +37,7 @@ const schema = DEFAULT_SCHEMA.extend([withAlphaType]);
 const transformSoft = theme => {
     /** @type {Theme} */
     const soft = JSON.parse(JSON.stringify(theme));
-    const brightColors = [...soft.dracula.ansi, ...soft.dracula.brightOther];
+    const brightColors = [...soft.snaz.ansi, ...soft.snaz.brightOther];
     for (const key of Object.keys(soft.colors)) {
         if (brightColors.includes(soft.colors[key])) {
             soft.colors[key] = tinycolor(soft.colors[key])
@@ -56,7 +56,7 @@ const transformSoft = theme => {
 
 module.exports = async () => {
     const yamlFile = await readFile(
-        join(__dirname, '..', 'src', 'dracula.yml'),
+        join(__dirname, '..', 'src', 'snaz.yml'),
         'utf-8'
     );
 

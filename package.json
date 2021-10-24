@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "publisher": "akarlsten",
 	"scripts": {
 		"build": "node ./scripts/build.js",
 		"lint": "node ./scripts/lint.js",
@@ -17,5 +18,22 @@
     "prettier": "^2.4.1",
     "tinycolor2": "^1.4.2",
     "vsce": "^1.100.1"
+  },
+    "categories": [
+    "Themes"
+  ],
+  "contributes": {
+    "themes": [
+      {
+        "label": "Snaz",
+        "uiTheme": "vs-dark",
+        "path": "./theme/snaz.json"
+      },
+            {
+        "label": "Snaz Softer",
+        "uiTheme": "vs-dark",
+        "path": "./theme/snaz-soft.json"
+      }
+    ]
   }
 }
