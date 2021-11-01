@@ -3,24 +3,29 @@
   "version": "1.0.0",
   "description": "",
   "publisher": "akarlsten",
-  "engines": {"vscode": "^1.22.0"},
-	"scripts": {
-		"build": "node ./scripts/build.js",
-		"lint": "node ./scripts/lint.js",
-		"package": "vsce package -o ./bin/snaz.vsix",
-		"vscode:prepublish": "npm run build",
-		"vsce-publish": "vsce publish"
-	},
+  "engines": {
+    "vscode": "^1.22.0"
+  },
+  "scripts": {
+    "build": "node ./scripts/build.js",
+    "lint": "node ./scripts/lint.js",
+    "package": "vsce package -o ./bin/snaz.vsix",
+    "vscode:prepublish": "npm run build",
+    "vsce-publish": "vsce publish",
+    "dev:watch": "watch 'npm run build' ./src"
+  },
   "author": "Adam Karlsten <adamkarlsten@gmail.com>",
   "license": "ISC",
-  "repository": {"url": "https://github.com/akarlsten/snaz"},
+  "repository": {
+    "url": "https://github.com/akarlsten/snaz"
+  },
   "dependencies": {
     "js-yaml": "^4.1.0",
     "prettier": "^2.4.1",
     "tinycolor2": "^1.4.2",
     "vsce": "^1.100.1"
   },
-    "categories": [
+  "categories": [
     "Themes"
   ],
   "contributes": {
@@ -30,11 +35,14 @@
         "uiTheme": "vs-dark",
         "path": "./theme/snaz.json"
       },
-            {
+      {
         "label": "Snaz Softer",
         "uiTheme": "vs-dark",
         "path": "./theme/snaz-soft.json"
       }
     ]
+  },
+  "devDependencies": {
+    "watch": "^1.0.2"
   }
 }

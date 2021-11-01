@@ -13,8 +13,7 @@
             "preLaunchTask": "npm: build",
             "args": [
                 "--extensionDevelopmentPath=${workspaceFolder}",
-                "--disable-extensions",
-                "${file}"
+                "~/dev/snaz"
             ]
         },
         {
