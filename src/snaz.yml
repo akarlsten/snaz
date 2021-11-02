@@ -102,7 +102,7 @@ colors:
   button.background: *YELLOW # * Button background color
   button.foreground: *BG # * Button foreground color
   button.border: # * Button border color
-  button.hoverBackground: *COLOR13 # * Button background color when hovering
+  button.hoverBackground: *COLOR11 # * Button background color when hovering
   button.secondaryBackground: *BGLight # * Secondary button background color.
   button.secondaryForeground: *FG # * Secondary button foreground color.
   button.secondaryHoverBackground: *BGLighter # * Secondary button background color when hovering.
@@ -187,7 +187,7 @@ colors:
   tab.activeBackground: *BG # Active Tab background color
   tab.activeForeground: *FG # Active Tab foreground color in an active group
   tab.border: *BGDark # Border to separate Tabs from each other
-  tab.activeBorderTop: *PINK # !alpha [*PINK, 80] # A border drawn to the top of the active tab
+  tab.activeBorderTop: *YELLOW # !alpha [*PINK, 80] # A border drawn to the top of the active tab
   tab.activeBorder: # *PINK # A border drawn to the bottom of the active tab
   tab.activeBorderBottom: *PINK
   tab.unfocusedActiveBorder: # A border drawn to the bottom of the active tab in an editor group that is not focused
@@ -220,7 +220,7 @@ colors:
   editor.lineHighlightBackground: !alpha [*BGDark, 80] # Background color for the highlight of line at the cursor position
   editor.lineHighlightBorder: # *SELECTION # Background color for the border around the line at the cursor position
 
-  editorLink.activeForeground: *CYAN # Color of active links
+  editorLink.activeForeground: *YELLOW # Color of active links
   editor.rangeHighlightBackground: !alpha [*PURPLE, 15] # Background color of highlighted ranges, like by Quick Open and Find features
 
   editor.snippetTabstopHighlightBackground: *BG # Highlight background color of a snippet tabstop
@@ -339,7 +339,7 @@ colors:
   # Status Bar Colors
   statusBar.background: *BGDarker # Standard Status Bar background color
   statusBar.foreground: *COMMENT # Status Bar foreground color
-  statusBar.debuggingBackground: *YELLOW # Status Bar background color when a program is being debugged
+  statusBar.debuggingBackground: *ORANGE # Status Bar background color when a program is being debugged
   statusBar.debuggingForeground: *BG # Status Bar foreground color when a program is being debugged
   statusBar.noFolderBackground: *BGDarker # Status Bar foreground color when no folder is opened
   statusBar.noFolderForeground: *COMMENT # Status Bar background color when no folder is opened
@@ -358,8 +358,8 @@ colors:
   titleBar.inactiveForeground: *COMMENT # Title Bar foreground when the window is inactive
 
   # Notification Dialog Colors
-  notification.background: *BG # Notifications background color
-  notification.foreground: *FG # Notifications foreground color
+  notifications.background: *BGDarker # Notifications background color
+  notifications.foreground: *FG # Notifications foreground color
   notification.buttonBackground: *SELECTION
   notification.buttonForeground: *FG
   notification.buttonHoverBackground: *LineHighlight
@@ -368,26 +368,38 @@ colors:
   notification.infoBackground: *CYAN
   notification.infoForeground: *BG
   notification.warningBackground: *ORANGE
-  notification.warningForeground: *BG
+  notification.warningForeground: *BGDarker
+  notifications.border: *BGDark
+  notificationToast.border: *BG
+
+  notificationsErrorIcon.foreground: *RED
+  notificationsWarningIcon.foreground: *YELLOW
+  notificationsInfoIcon.foreground: *CYAN
+  notificationCenter.border:
+  notificationCenterHeader.foreground: *FG
+  notificationCenterHeader.background: *BGDarker
+  notificationLink.foreground: *YELLOW
 
   # Extensions
   extensionButton.prominentForeground: *FG # Extension view button foreground color (for example Install button)
   extensionButton.prominentBackground: !alpha [*GREEN, 90] # Extension view button background color
   extensionButton.prominentHoverBackground: !alpha [*GREEN, 60] # Extension view button background hover color
-
+  extensionIcon.starForeground: *YELLOW
+  extensionBadge.remoteForeground: *BG
+  extensionBadge.remoteBackground: *YELLOW
   # Quick Picker
   pickerGroup.border: *YELLOW # Quick picker (Quick Open) color for grouping borders
   pickerGroup.foreground: *YELLOW # Quick picker (Quick Open) color for grouping labels
   quickInput.background: *BGDarker
   quickInputList.focusBackground: *SELECTION
-  quickInputTitle.background: *PINK
+  quickInputTitle.background: *BGDarker
   # Debug
   debugToolBar.background: *BGDark # Debug toolbar background color
 
   # Welcome Page
   welcomePage.buttonBackground: # Background color for the buttons on the Welcome page
   welcomePage.buttonHoverBackground: # Hover background color for the buttons on the Welcome page
-  walkThrough.embeddedEditorBackground: *BGDark # Background color for the embedded editors on the Interactive Playground
+  walkThrough.embeddedEditorBackground: *BGDarker # Background color for the embedded editors on the Interactive Playground
 
   # Setting Editor
   settings.headerForeground: *FG # The foreground color for a section header or active title
@@ -445,6 +457,10 @@ colors:
   minimapGutter.addedBackground: # Minimap gutter color for added content.
   minimapGutter.modifiedBackground: # Minimap gutter color for modified content.
   minimapGutter.deletedBackground: # Minimap gutter color for deleted content
+
+  # Gitlens (extension)
+  gitlens.trailingLineForegroundColor: *BGLighter
+  gitlens.trailingLineBackgroundColor:
 
 # Syntaxes
 tokenColors:
@@ -634,7 +650,7 @@ tokenColors:
       - variable.other.readwrite.instance.ruby # ruby's "@" instance symbol
       - variable.parameter.function.language.special # Special words as parameters
     settings:
-      foreground: *PURPLE
+      foreground: *PINK
       # fontStyle: italic
 
   - name: Inherited classes
@@ -704,6 +720,12 @@ tokenColors:
     settings:
       foreground: *PINK
 
+  - name: Numbers
+    scope:
+      - constant.numeric
+    settings:
+      foreground: *YELLOW
+
   # =============================================================================
   # Entities
   # =============================================================================
@@ -749,13 +771,26 @@ tokenColors:
     scope:
       - keyword.other.unit
     settings:
-      foreground: *PINK
+      foreground: *CYAN
 
   - name: CSS numeric
     scope:
       - constant.numeric.css
     settings:
-      foreground: *FG
+      foreground: *YELLOW
+
+  - name: CSS Separator
+    scope:
+      - punctuation.separator.key-value.scss
+      - punctuation.separator.key-value.css
+    settings:
+      foreground: *PINK
+
+  - name: SCSS variable
+    scope:
+      - variable.scss
+    settings:
+      foreground: *PINK
 
   # =============================================================================
   # Functions/Methods
@@ -767,6 +802,7 @@ tokenColors:
       - meta.function-call.object
       - meta.function-call.php
       - meta.function-call.static
+      - meta.function-call.python
       - meta.method-call.java meta.method
       - meta.method.groovy
       - support.function.any-method.lua
@@ -945,7 +981,7 @@ tokenColors:
     scope:
       - variable.other.alias.yaml
     settings:
-      fontStyle: underline # italic underline
+      fontStyle: # underline # italic underline
       foreground: *YELLOW
 
   # =============================================================================
@@ -965,6 +1001,7 @@ tokenColors:
   - name: Types
     scope:
       - entity.name.type
+      - entity.name.type.tsx
       - support.class
       - keyword.primitive-datatypes.swift
       - keyword.type.cs
@@ -1106,6 +1143,12 @@ tokenColors:
       - variable.other.constant.object.tsx
     settings:
       foreground: *FG
+
+  - name: Object props
+    scope:
+      - variable.other.property
+    settings:
+      foreground: *RED # TODO: change this perhaps
 
   - name: Destructuring / aliasing reference name (LHS)
     scope:

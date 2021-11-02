@@ -31,6 +31,7 @@ export interface PlacesPanelProps {
 }
 
 const {{{{{{{{{{{{{ }}}}}}}}}}}}}
+
 const PlacesPanel = ({
   id,
   selectedPlace,
@@ -64,7 +65,7 @@ const PlacesPanel = ({
         if (selectedPlace.Title !== "All" && displayMode !== DisplayMode.ChoosePlace) {
           setIsCollapsed(true)
         }
-      }
+      } 2
     }
 
     document.addEventListener("mousedown", handleClickOutside)
