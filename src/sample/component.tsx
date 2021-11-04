@@ -32,6 +32,18 @@ export interface PlacesPanelProps {
 
 const {{{{{{{{{{{{{ }}}}}}}}}}}}}
 
+const object = {
+  one: 'abc',
+  two: 123,
+  three: true,
+  four: undefined,
+  five: null,
+  six: ['1', 2, true],
+  seven: { x: 5, y: Math.PI },
+  eight: Array.isArray([1, 2, 3]),
+  nine: () => console.log('lol')
+}
+
 const PlacesPanel = ({
   id,
   selectedPlace,
@@ -79,6 +91,7 @@ const PlacesPanel = ({
 
   return (
     <div ref={panelRef} id={id + "dropdown"} className={`${styles.placesPanelContainer} ${isCollapsed ? styles.placesPanelContainer__collapsed : ''}`}>
+      <div>Hello there</div>
       {isCollapsed ? (
         <div className={styles.placesPanelContainer__clicker} onClick={() => setIsCollapsed(false)}>
           <Icon iconName="ChevronRight" />

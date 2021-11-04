@@ -208,20 +208,20 @@ colors:
   editor.inactiveSelectionBackground: # Color of the selection in an inactive editor
   editor.foldBackground: *BG # Background color for folded ranges
 
-  editor.wordHighlightBackground: !alpha [*CYAN, 50] # Background color of a symbol during read-access, for example when reading a variable
-  editor.wordHighlightStrongBackground: !alpha [*GREEN, 50] # Background color of a symbol during write-access, for example when writing to a variable
+  editor.wordHighlightBackground: *BGLight #!alpha [*CYAN, 50] # Background color of a symbol during read-access, for example when reading a variable
+  editor.wordHighlightStrongBackground: *BGLighter #!alpha [*YELLOW, 50] # Background color of a symbol during write-access, for example when writing to a variable
 
-  editor.findMatchBackground: !alpha [*ORANGE, 80]
-  editor.findMatchHighlightBackground: !alpha [*WHITE, 40] # Color of the other search matches
+  editor.findMatchBackground: !alpha [*YELLOW, 80]
+  editor.findMatchHighlightBackground: !alpha [*COMMENT, 80] # Color of the other search matches
   editor.findRangeHighlightBackground: *LineHighlight # Color the range limiting the search
 
-  editor.hoverHighlightBackground: !alpha [*CYAN, 50] # Highlight below the word for which a hover is shown
+  editor.hoverHighlightBackground: !alpha [*SELECTION, 90] # Highlight below the word for which a hover is shown
 
   editor.lineHighlightBackground: !alpha [*BGDark, 80] # Background color for the highlight of line at the cursor position
   editor.lineHighlightBorder: # *SELECTION # Background color for the border around the line at the cursor position
 
   editorLink.activeForeground: *YELLOW # Color of active links
-  editor.rangeHighlightBackground: !alpha [*PURPLE, 15] # Background color of highlighted ranges, like by Quick Open and Find features
+  editor.rangeHighlightBackground: !alpha [*BGLight, 40] # Background color of highlighted ranges, like by Quick Open and Find features
 
   editor.snippetTabstopHighlightBackground: *BG # Highlight background color of a snippet tabstop
   editor.snippetTabstopHighlightBorder: *COMMENT # Highlight border color of a snippet tabstop
@@ -641,7 +641,7 @@ tokenColors:
       foreground: *CYAN
       fontStyle: normal
 
-  - name: this, super, self, etc.
+  - name: this, self, etc.
     scope:
       - keyword.expressions-and-types.swift
       - keyword.other.this
@@ -651,6 +651,13 @@ tokenColors:
       - variable.parameter.function.language.special # Special words as parameters
     settings:
       foreground: *PINK
+      # fontStyle: italic
+
+  - name: super
+    scope:
+      - variable.language.super
+    settings:
+      foreground: *RED
       # fontStyle: italic
 
   - name: Inherited classes
@@ -726,6 +733,18 @@ tokenColors:
     settings:
       foreground: *YELLOW
 
+  - name: Null
+    scope:
+      - constant.language.null
+    settings:
+      foreground: *RED
+
+  - name: Undefined
+    scope:
+      - constant.language.undefined
+    settings:
+      foreground: *PINK
+
   # =============================================================================
   # Entities
   # =============================================================================
@@ -759,7 +778,7 @@ tokenColors:
     scope:
       - support.type.property-name.css
     settings:
-      foreground: *YELLOW
+      foreground: *PINK
 
   - name: CSS property value
     scope:
@@ -790,7 +809,7 @@ tokenColors:
     scope:
       - variable.scss
     settings:
-      foreground: *PINK
+      foreground: *PURPLE
 
   # =============================================================================
   # Functions/Methods
@@ -1037,7 +1056,7 @@ tokenColors:
     scope:
       - storage.modifier
     settings:
-      foreground: *PINK
+      foreground: *YELLOW
 
   # =============================================================================
   # RegExp
@@ -1115,7 +1134,7 @@ tokenColors:
       - punctuation.support.type.property-name.begin
       - punctuation.support.type.property-name.end
     settings:
-      foreground: *RED # *TEMP_PROPERTY_QUOTES
+      foreground: *PINK # *TEMP_PROPERTY_QUOTES
 
   - name: Docstrings
     scope:
@@ -1132,23 +1151,41 @@ tokenColors:
 
   - name: Variables and object properties
     scope:
-      - variable
-      - constant.other.key.perl # Perl edge case
-      - support.variable.property # Object properties
-      - variable.other.constant.js # Fix incorrect highlighting of pseudo-constants in js, jsx
-      - variable.other.constant.ts # Fixes incorrect highlighting of pseudo-constants in ts
-      - variable.other.constant.tsx # Fixes incorrect highlighting of pseudo-constants in tsx
+      # - variable
+      # - constant.other.key.perl # Perl edge case
+      # - support.variable.property # Object properties
+      # - variable.other.constant.js # Fix incorrect highlighting of pseudo-constants in js, jsx
+      # - variable.other.constant.ts # Fixes incorrect highlighting of pseudo-constants in ts
+      # - variable.other.constant.tsx # Fixes incorrect highlighting of pseudo-constants in tsx
+      - punctuation.definition.tag
+      - variable.other.object
       - variable.other.constant.object.js # Fix incorrect highlighting of pseudo-constants in js, jsx
       - variable.other.constant.object.ts
       - variable.other.constant.object.tsx
+      - meta.jsx.children
     settings:
       foreground: *FG
 
-  - name: Object props
+  - name: Object props inline
     scope:
-      - variable.other.property
+      - meta.embedded.expression
+      - meta.embedded.line
     settings:
-      foreground: *RED # TODO: change this perhaps
+      foreground: *CYAN # TODO: change this perhaps
+
+  # - name: Object props
+  #   scope:
+  #     - variable.object.property.tsx
+  #   settings:
+  #     foreground: *YELLOW # TODO: change this perhaps
+
+  - name: Object key
+    scope:
+      - meta.object-literal.key
+      - meta.object-literal.key string
+      - support.type.property-name.json
+    settings:
+      foreground: *PINK # TODO: change this perhaps
 
   - name: Destructuring / aliasing reference name (LHS)
     scope:

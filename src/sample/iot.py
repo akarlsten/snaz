@@ -55,7 +55,7 @@ while True:
 
         if result.is_valid():
             resultValid = True
-            pycom.rgbled(0x001000)  # green
+            pycom.rgbled(0x00FF00)  # green
 
             results = {
                 "timestamp": time.time(),

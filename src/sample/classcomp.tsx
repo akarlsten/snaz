@@ -26,6 +26,7 @@ export default class TvInfo extends React.Component<TvInfoProps, TvInfoState> {
       isCalloutVisible: false,
     }
   }
+
   private toggleIsCalloutVisible() {
     this.setState({ isCalloutVisible: !this.state.isCalloutVisible })
   }
