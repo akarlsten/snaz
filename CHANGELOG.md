@@ -1,3 +1,7 @@
+# 1.1.0
+
+-   Change terminal brightBlack to actually be readable
+
 # 1.0.2
 
 -   Add nicer logo
