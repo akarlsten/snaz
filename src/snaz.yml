@@ -41,7 +41,7 @@ snaz:
     - &COLOR5 '#ff6ac1'
     - &COLOR6 '#9aedfe'
     - &COLOR7 '#eff0eb'
-    - &COLOR8 '#2d314d' # bBlack #2d314d
+    - &COLOR8 '#6f77aa' # bBlack #2d314d
     - &COLOR9 '#ff7470' # bRed #ff7470
     - &COLOR10 '#72f89e' # bGreen #72f89e
     - &COLOR11 '#ffc671' # bYellow #ffc671

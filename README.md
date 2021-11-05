@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://github.com/akarlsten/snaz/raw/main/logo.png" width="640" height="320">
+  <img src="https://github.com/akarlsten/snaz/raw/main/logo-rounded.png" width="1280" height="640">
 </p>
 
 # Snaz
