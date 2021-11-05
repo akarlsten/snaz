@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://github.com/akarlsten/snaz/raw/master/icon.png" width="200" height="200">
+  <img src="https://github.com/akarlsten/snaz/raw/main/icon.png" width="200" height="200">
 </p>
 
 # Snaz
@@ -18,19 +18,19 @@ Font used: [`Iosevka`](https://github.com/be5invis/Iosevka)
 
 **Typescript**
 
-![sample-typescript](https://github.com/akarlsten/snaz/raw/master/sample-ts.png)
+![sample-typescript](https://github.com/akarlsten/snaz/raw/main/sample-ts.png)
 
 **CSS**
 
-![sample-css](https://github.com/akarlsten/snaz/raw/master/sample-css.png)
+![sample-css](https://github.com/akarlsten/snaz/raw/main/sample-css.png)
 
 **JSON**
 
-![sample-json](https://github.com/akarlsten/snaz/raw/master/sample-json.png)
+![sample-json](https://github.com/akarlsten/snaz/raw/main/sample-json.png)
 
 **C#**
 
-![sample-csharp](https://github.com/akarlsten/snaz/raw/master/sample-csharp.png)
+![sample-csharp](https://github.com/akarlsten/snaz/raw/main/sample-csharp.png)
 
 ## Changes
 
