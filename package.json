@@ -1,7 +1,7 @@
 {
   "name": "snaz",
   "displayName": "Snaz",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "homepage": "https://github.com/akarlsten/snaz",
   "description": "A dark and pleasant color theme.",
   "publisher": "akarlsten",
@@ -40,7 +40,7 @@
   ],
   "icon": "icon.png",
   "galleryBanner": {
-    "color": "#10111b",
+    "color": "#24283e",
     "theme": "dark"
   },
   "contributes": {

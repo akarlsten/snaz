@@ -32,10 +32,6 @@ Font used: [`Iosevka`](https://github.com/be5invis/Iosevka)
 
 ![sample-csharp](https://github.com/akarlsten/snaz/raw/main/sample-csharp.png)
 
-## Changes
-
-1.0.0 - Initial release
-
 ## Credits
 
 -   [dracula](https://github.com/dracula/visual-studio-code)
