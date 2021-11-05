@@ -1,11 +1,14 @@
 {
   "name": "snaz",
+  "displayName": "Snaz",
   "version": "1.0.0",
-  "description": "",
+  "homepage": "https://github.com/akarlsten/snaz",
+  "description": "A dark and pleasant color theme.",
   "publisher": "akarlsten",
   "engines": {
     "vscode": "^1.22.0"
   },
+  "bugs": { "url": "https://github.com/akarlsten/snaz/issues"},
   "scripts": {
     "build": "node ./scripts/build.js",
     "lint": "node ./scripts/lint.js",
@@ -15,9 +18,10 @@
     "dev:watch": "watch 'npm run build' ./src"
   },
   "author": "Adam Karlsten <adamkarlsten@gmail.com>",
-  "license": "ISC",
+  "license": "MIT",
   "repository": {
-    "url": "https://github.com/akarlsten/snaz"
+    "type": "git",
+    "url": "https://github.com/akarlsten/snaz.git"
   },
   "dependencies": {
     "js-yaml": "^4.1.0",
@@ -28,17 +32,23 @@
   "categories": [
     "Themes"
   ],
+  "keywords": [
+    "snaz",
+    "dark",
+    "theme",
+    "color-theme"
+  ],
+  "icon": "icon.png",
+  "galleryBanner": {
+    "color": "#10111b",
+    "theme": "dark"
+  },
   "contributes": {
     "themes": [
       {
         "label": "Snaz",
         "uiTheme": "vs-dark",
         "path": "./theme/snaz.json"
-      },
-      {
-        "label": "Snaz Softer",
-        "uiTheme": "vs-dark",
-        "path": "./theme/snaz-soft.json"
       }
     ]
   },

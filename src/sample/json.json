@@ -1,44 +1,16 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/spfx/client-side-web-part-manifest.schema.json",
-  "id": "ab6ab2ee-8424-4c68-a703-ad2c147d4e81",
-  "alias": "TvAppWebPart",
-  "componentType": "WebPart",
-  "version": "*",
-  "manifestVersion": 2,
-  "requiresCustomScript": false,
-  "supportedHosts": [
-    "SharePointWebPart",
-    "SharePointFullPage"
-  ],
-  "supportsFullBleed": true,
-  "preconfiguredEntries": [
-    {
-      "groupId": "5c03119e-3074-46fd-976b-c60198311f70",
-      "group": {
-        "default": "Other"
-      },
-      "title": {
-        "default": "BaseDrum - TV App"
-      },
-      "description": {
-        "default": "TVApp"
-      },
-      "officeFabricIconFontName": "Page",
-      "properties": {
-        "title": "TVApp",
-        "description": "",
-        "defaultDuration": 30,
-        "defaultVolume": 10,
-        "showSideSlideOnAll": false,
-        "logo": "",
-        "layout": "Default",
-        "progressBarMode": "None",
-        "showDateTime": false,
-        "backgroundColor": "#ffff",
-        "sideWidth": "Medium",
-        "spaceBetween": 2,
-        "RSSProxys": "https://cors-anywhere.herokuapp.com/\nhttps://api.codetabs.com/v1/proxy?quest="
-      }
-    }
-  ]
+  "properties": {
+    "title": "TVApp",
+    "description": "",
+    "defaultDuration": 30,
+    "defaultVolume": 10,
+    "showSideSlideOnAll": false,
+    "logo": "",
+    "layout": "Default",
+    "progressBarMode": "None",
+    "showDateTime": false,
+    "backgroundColor": "#ffff",
+    "sideWidth": "Medium",
+    "spaceBetween": 2
+  }
 }

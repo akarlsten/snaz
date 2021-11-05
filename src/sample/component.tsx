@@ -30,7 +30,15 @@ export interface PlacesPanelProps {
   setDisplayMode: (displayMode: DisplayMode) => void
 }
 
-const {{{{{{{{{{{{{ }}}}}}}}}}}}}
+const nested = {
+  nesting: {
+    nested: {
+      nest: {
+
+      }
+    }
+  }
+}
 
 const object = {
   one: 'abc',
@@ -41,7 +49,7 @@ const object = {
   six: ['1', 2, true],
   seven: { x: 5, y: Math.PI },
   eight: Array.isArray([1, 2, 3]),
-  nine: () => console.log('lol')
+  nine: () => console.log('lol'),
 }
 
 const PlacesPanel = ({
@@ -52,9 +60,7 @@ const PlacesPanel = ({
   person,
   placesLoading,
   changePlace,
-  setDisplayMode,
   getPlaces,
-  setShowGlobalSettings
 }: PlacesPanelProps): JSX.Element => {
   const [isCollapsed, setIsCollapsed] = useState(false)
   const [showAddPlaceDialog, setShowAddPlaceDialog] = useState(false)
@@ -63,13 +69,11 @@ const PlacesPanel = ({
 
   useEffect(() => {
     if (displayMode !== DisplayMode.ChoosePlace) {
-      if (selectedPlace.title !== "All") {
-        setIsCollapsed(true)
-      }
+      setIsCollapsed(true)
     } else {
       setIsCollapsed(false)
     }
-  }, [displayMode, selectedPlace])
+  }, [displayMode])
 
   useEffect(() => {
     const handleClickOutside = (e) => {
@@ -77,7 +81,7 @@ const PlacesPanel = ({
         if (selectedPlace.Title !== "All" && displayMode !== DisplayMode.ChoosePlace) {
           setIsCollapsed(true)
         }
-      } 2
+      }
     }
 
     document.addEventListener("mousedown", handleClickOutside)
