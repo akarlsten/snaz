@@ -1,3 +1,8 @@
+# 1.2.0
+
+-   Change statusbar color when debugging to red
+-   Adds colors for debug toolbar, debug symbols, outline symbols, etc.
+
 # 1.1.0
 
 -   Change terminal brightBlack to actually be readable

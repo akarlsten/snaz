@@ -97,6 +97,7 @@ colors:
   widget.shadow: *BGDarker # Shadow color of widgets such as Find/Replace inside the editor
   selection.background: *SELECTION # Background color of text selections in the workbench (for input fields or text areas, does not apply to selections within the editor and the terminal)
   errorForeground: *RED # Overall foreground color for error messages (this color is only used if not overridden by a component)
+  icon.foreground: *COMMENT
 
   # Button Control
   button.background: *YELLOW # * Button background color
@@ -106,6 +107,9 @@ colors:
   button.secondaryBackground: *BGLight # * Secondary button background color.
   button.secondaryForeground: *FG # * Secondary button foreground color.
   button.secondaryHoverBackground: *BGLighter # * Secondary button background color when hovering.
+  checkbox.background: *YELLOW
+  checkbox.foreground: *BG
+  checkbox.boder:
 
   # Dropdown Control
   dropdown.background: *BGDarker # * Dropdown background
@@ -156,6 +160,7 @@ colors:
   list.hoverForeground: # * List/Tree foreground when hovering over items using the mouse
   list.focusForeground: # * List/Tree foreground color for the focused item when the list/tree is active. An active list/tree has keyboard focus, an inactive does not
   list.focusOutline: *SELECTION # *
+  tree.indentGuidesStroke: *SELECTION
 
   # Activity Bar
   activityBar.background: *BGDarker # Activity Bar background color
@@ -339,8 +344,8 @@ colors:
   # Status Bar Colors
   statusBar.background: *BGDarker # Standard Status Bar background color
   statusBar.foreground: *COMMENT # Status Bar foreground color
-  statusBar.debuggingBackground: *ORANGE # Status Bar background color when a program is being debugged
-  statusBar.debuggingForeground: *BG # Status Bar foreground color when a program is being debugged
+  statusBar.debuggingBackground: *RED # Status Bar background color when a program is being debugged
+  statusBar.debuggingForeground: *FG # Status Bar foreground color when a program is being debugged
   statusBar.noFolderBackground: *BGDarker # Status Bar foreground color when no folder is opened
   statusBar.noFolderForeground: *COMMENT # Status Bar background color when no folder is opened
   statusBarItem.activeBackground: *BGDark # Status Bar item background color when clicking
@@ -393,10 +398,9 @@ colors:
   quickInput.background: *BGDarker
   quickInputList.focusBackground: *SELECTION
   quickInputTitle.background: *BGDarker
-  # Debug
-  debugToolBar.background: *BGDark # Debug toolbar background color
 
   # Welcome Page
+  welcomePage.background:
   welcomePage.buttonBackground: # Background color for the buttons on the Welcome page
   welcomePage.buttonHoverBackground: # Hover background color for the buttons on the Welcome page
   walkThrough.embeddedEditorBackground: *BGDarker # Background color for the embedded editors on the Interactive Playground
@@ -462,7 +466,85 @@ colors:
   gitlens.trailingLineForegroundColor: *BGLighter
   gitlens.trailingLineBackgroundColor:
 
-# Syntaxes
+  # Debug Toolbar
+  debugToolBar.background: *BGDarker # Debug toolbar background color.
+  debugToolBar.border: # Debug toolbar border color.
+  debugIcon.startForeground: *GREEN # Debug toolbar icon for start debugging.
+  debugIcon.pauseForeground: *BLUE # Debug toolbar icon for pause.
+  debugIcon.stopForeground: *RED # Debug toolbar icon for stop.
+  debugIcon.disconnectForeground: *RED # Debug toolbar icon for disconnect.
+  debugIcon.restartForeground: *GREEN # Debug toolbar icon for restart.
+  debugIcon.stepOverForeground: *CYAN # Debug toolbar icon for step over.
+  debugIcon.stepIntoForeground: *BLUE # Debug toolbar icon for step into.
+  debugIcon.stepOutForeground: *YELLOW # Debug toolbar icon for step over.
+  debugIcon.continueForeground: *GREEN # Debug toolbar icon for continue.
+  debugIcon.stepBackForeground: *YELLOW # Debug toolbar icon for step back.
+  debugIcon.breakpointForeground: *RED
+  debugIcon.breakpointDisabledForeground: *COMMENT
+  debugIcon.breakpointUnverifiedForeground: *YELLOW
+
+  debugIcon.breakpointCurrentStackframeForeground: *YELLOW # The arrow around the current breakpoint
+  debugIcon.breakpointStackframeForeground: *YELLOW # Other arrows
+
+  # Debug Console
+  debugConsole.infoForeground: *FG # Foreground color for info messages in debug REPL console.
+  debugConsole.warningForeground: *YELLOW # Foreground color for warning messages in debug REPL console.
+  debugConsole.errorForeground: *RED # Foreground color for error messages in debug REPL console.
+  debugConsole.sourceForeground: *PINK # Foreground color for source filenames in debug REPL console.
+  debugConsoleInputIcon.foreground: *PINK # Foreground color for debug console input marker icon.
+
+  # Debug views
+  debugTokenExpression.value: *FG # Foreground color for the token values shown in debug views
+  debugTokenExpression.string: *GREEN # Foreground color for strings in debug views
+  debugTokenExpression.boolean: *PURPLE # Foreground color for booleans in debug views
+  debugTokenExpression.number: *YELLOW # Foreground color for numbers in debug views
+  debugTokenExpression.error: *RED # Foreground color for expression errors in debug views
+  debugTokenExpression.name: *YELLOW
+  editor.stackFrameHighlightBackground: !alpha [*YELLOW, 40]
+  editor.focusedStackFrameHighlightBackground: !alpha [*YELLOW, 25]
+  editor.inlineValuesForeground: *PINK
+  debugView.stateLabelForeground: *BG
+  debugView.stateLabelBackground: *YELLOW
+  debugView.exceptionLabelBackground: *RED
+  debugView.exceptionLabelForeground: *FG
+  debugView.valueChangedHighlight: *CYAN
+
+  # Symbol Icons
+  symbolIcon.arrayForeground: *YELLOW # The foreground color for array symbols.
+  symbolIcon.booleanForeground: *PURPLE # The foreground color for boolean symbols.
+  symbolIcon.classForeground: *CYAN # The foreground color for class symbols.
+  symbolIcon.colorForeground: # The foreground color for color symbols.
+  symbolIcon.constantForeground: *PURPLE # The foreground color for constant symbols.
+  symbolIcon.constructorForeground: *YELLOW # The foreground color for constructor symbols.
+  symbolIcon.enumeratorForeground: # The foreground color for enumerator symbols.
+  symbolIcon.enumeratorMemberForeground: # The foreground color for enumerator member symbols.
+  symbolIcon.eventForeground: # The foreground color for event symbols.
+  symbolIcon.fieldForeground: *PINK # The foreground color for field symbols.
+  symbolIcon.fileForeground: # The foreground color for file symbols.
+  symbolIcon.folderForeground: # The foreground color for folder symbols.
+  symbolIcon.functionForeground: *BLUE # The foreground color for function symbols.
+  symbolIcon.interfaceForeground: *CYAN # The foreground color for interface symbols.
+  symbolIcon.keyForeground: # The foreground color for key symbols.
+  symbolIcon.keywordForeground: # The foreground color for keyword symbols.
+  symbolIcon.methodForeground: *BLUE # The foreground color for method symbols.
+  symbolIcon.moduleForeground: # The foreground color for module symbols.
+  symbolIcon.namespaceForeground: *YELLOW # The foreground color for namespace symbols.
+  symbolIcon.nullForeground: *RED # The foreground color for null symbols.
+  symbolIcon.numberForeground: *YELLOW # The foreground color for number symbols.
+  symbolIcon.objectForeground: *YELLOW # The foreground color for object symbols.
+  symbolIcon.operatorForeground: # The foreground color for operator symbols.
+  symbolIcon.packageForeground: # The foreground color for package symbols.
+  symbolIcon.propertyForeground: *COMMENT # The foreground color for property symbols.
+  symbolIcon.referenceForeground: # The foreground color for reference symbols.
+  symbolIcon.snippetForeground: # The foreground color for snippet symbols.
+  symbolIcon.stringForeground: *GREEN # The foreground color for string symbols.
+  symbolIcon.structForeground: # The foreground color for struct symbols.
+  symbolIcon.textForeground: # The foreground color for text symbols.
+  symbolIcon.typeParameterForeground: # The foreground color for type parameter symbols.
+  symbolIcon.unitForeground: # The foreground color for unit symbols.
+  symbolIcon.variableForeground: *YELLOW # The foreground color for variable symbols
+
+  # Syntaxes
 tokenColors:
   # =============================================================================
   # General
