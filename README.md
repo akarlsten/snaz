@@ -12,6 +12,8 @@ Additionally there is now theming for the entire UI thanks to the linting and co
 
 Feel free to open a Github issue for any comments/suggestions.
 
+![colors](https://github.com/akarlsten/snaz/raw/main/colors.png)
+
 ## Samples
 
 Font used: [`Iosevka`](https://github.com/be5invis/Iosevka)

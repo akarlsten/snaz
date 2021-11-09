@@ -1,3 +1,8 @@
+# 1.2.1
+
+-   Fixes the appearance of strings as object keys
+-   Fixes the appearance of renaming destructured variables
+
 # 1.2.0
 
 -   Change statusbar color when debugging to red

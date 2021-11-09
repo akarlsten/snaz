@@ -50,6 +50,8 @@ const object = {
   seven: { x: 5, y: Math.PI },
   eight: Array.isArray([1, 2, 3]),
   nine: () => console.log('lol'),
+  'stringkey': 123,
+  "stringkey2": 456
 }
 
 const PlacesPanel = ({
