@@ -1,3 +1,7 @@
+# 1.2.2
+
+-   Fixes the appearance of generic type annotations when using primitives, like useRef<string>(), etc.
+
 # 1.2.1
 
 -   Fixes the appearance of strings as object keys

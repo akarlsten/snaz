@@ -1125,8 +1125,9 @@ tokenColors:
       - storage.type.php
       - storage.type.haskell
       - storage.type.ocaml
-      - support.type.primitve.tsx
+      - support.type.primitve
       - meta.type.annotation
+      - meta.type.parameters
     settings:
       fontStyle: italic
       foreground: *CYAN
