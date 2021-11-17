@@ -1,3 +1,7 @@
+# 2.0.1
+
+-   Updates README
+
 # 2.0.0
 
 -   Adds color-harmonized icon theme, with a mix of icons from (VSCode Great Icons)[https://marketplace.visualstudio.com/items?itemName=emmanuelbeziat.vscode-great-icons] and (Material Icon Theme)[https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme], as well as a few originals.

@@ -12,11 +12,15 @@ Additionally there is now theming for the entire UI thanks to the linting and co
 
 Feel free to open a Github issue for any comments/suggestions.
 
+**Now comes with a custom icon theme, based on a mix of icons from (VSCode Great Icons)[https://marketplace.visualstudio.com/items?itemName=emmanuelbeziat.vscode-great-icons] and (Material Icon Theme)[https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme], as well as a few originals.**
+
 ![colors](https://github.com/akarlsten/snaz/raw/main/colors.png)
 
 ## Samples
 
 Font used: [`Iosevka`](https://github.com/be5invis/Iosevka)
+
+![sample](https://github.com/akarlsten/snaz/raw/main/sampler2.png)
 
 **Typescript**
 
