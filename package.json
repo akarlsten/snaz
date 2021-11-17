@@ -1,7 +1,7 @@
 {
   "name": "snaz",
   "displayName": "Snaz",
-  "version": "1.2.2",
+  "version": "2.0.0",
   "homepage": "https://github.com/akarlsten/snaz",
   "description": "A dark and pleasant color theme.",
   "publisher": "akarlsten",
@@ -36,7 +36,8 @@
     "snaz",
     "dark",
     "theme",
-    "color-theme"
+    "color-theme",
+    "icon-theme"
   ],
   "icon": "icon.png",
   "galleryBanner": {
@@ -49,6 +50,13 @@
         "label": "Snaz",
         "uiTheme": "vs-dark",
         "path": "./theme/snaz.json"
+      }
+    ],
+    "iconThemes": [
+      {
+        "id": "snaz-icons",
+        "label": "Snaz Icons",
+        "path": "./src/icons.json"
       }
     ]
   },

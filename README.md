@@ -36,7 +36,14 @@ Font used: [`Iosevka`](https://github.com/be5invis/Iosevka)
 
 ## Credits
 
+### Color Theme
+
 -   [dracula](https://github.com/dracula/visual-studio-code)
 -   [vscode-snazzy-operator](https://github.com/aaronthomas/vscode-snazzy-operator)
 -   [vscode-snazzy](https://github.com/alexanderbast/vscode-snazzy)
 -   [hyper-snazzy](https://github.com/sindresorhus/hyper-snazzy)
+
+### Icon Theme
+
+-   [Emmanuel Béziat (VSCode Great Icons)](https://marketplace.visualstudio.com/items?itemName=emmanuelbeziat.vscode-great-icons)
+-   [Philipp Kief (Material Icon Theme)](https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme)
