@@ -56,7 +56,7 @@
       {
         "id": "snaz-icons",
         "label": "Snaz Icons",
-        "path": "./src/icons.json"
+        "path": "./icons.json"
       }
     ]
   },
