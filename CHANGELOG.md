@@ -1,3 +1,7 @@
+# 2.0.2
+
+-   Fixes Icon theme, was unreachable by VSCE packager
+
 # 2.0.1
 
 -   Updates README
